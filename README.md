@@ -9,16 +9,24 @@ structure to see how the dependency has been handled.
 
 ###In details:
 
-There are 2 aar in the yoti-webviewsdk module in this project: webviewsdk-prod-release.aar and webviewsdk-prod-debug.aar.
-The debug version will display some logs that the release version won't.
+There are 2 aar in the yoti-webviewsdk module in this project:
+* webviewsdk-prod-release.aar
+* webviewsdk-prod-debug.aar (contains extra logs that the release don't record)
 
-Simply add either of those aar in a new aar gradle module let's call it 'yoti-webviewsdk'.
-Make sure the file build.gradle of you new module contains the following:
+#####The new module configuration
+Simply add either of those aar in a new aar gradle module. Let's call it 'yoti-webviewsdk'.
+Make sure the file build.gradle of your new module contains the following:
 ```groovy
 configurations.maybeCreate("default")
 artifacts.add("default", file('webviewsdk-prod-release.aar'))
 ```
 You can change to the debug aar if you want to see some logs of what is happening.
+
+#####You main app module configuration
+Make sure the file build.gradle of your main app module contains the following:
+```groovy
+ compile project(path: ':yoti-webviewsdk')
+```
 
 How does the webview SDK work
 -----------------------------
