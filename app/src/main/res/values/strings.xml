@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Yoti WebViewSDK Sample</string>
+    <string name="details_activity_title">Account Activity</string>
+    <string name="login_activity_title">Login Activity</string>
+    <string name="business_name">COMPANY\nLTD</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="or">Or</string>
+
+</resources>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        android:id="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp">
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/square_white_bg_small"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="@string/business_name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:id="@+id/welcome_back_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/img_placeholder_container"
+                android:layout_width="110dp"
+                android:layout_height="110dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <com.yoti.mobile.android.sample.sdk.webview.ui.SquarePercentLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img.user_avatar_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ph_user_pic"
+                            app:civ_border_color="@color/yoti_white"
+                            app:civ_border_width="2dp" />
+
+
+                        <ImageView
+                            android:id="@+id/img.yoti_logo_circle_grey"
+                            app:layout_widthPercent="25%"
+                            app:layout_heightPercent="25%"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:layout_marginRightPercent="6%"
+                            app:layout_marginBottomPercent="3%"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/yoti_logo_circle_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </com.yoti.mobile.android.sample.sdk.webview.ui.SquarePercentLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:text="Welcome Back"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Accounts"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/welcome_back_holder"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/textView2" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="20dp"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current account"
+                        android:textColor="@color/colorAccent"
+                        style="@style/Yoti.Text.Subhead3"
+                        android:id="@+id/textView3"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See all transactions"
+                        android:textColor="@color/yoti_blue"
+                        style="@style/Yoti.Text.Subhead3"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="£1,367.70"
+                        android:textColor="@color/colorAccent"
+                        style="@style/Yoti.Text.Display"
+                        android:layout_below="@+id/textView3" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        style="@style/Yoti.Text.Subhead3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Credit card"
+                        android:textColor="@color/colorAccent"
+                        android:id="@+id/textView4"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/Yoti.Text.Subhead3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See all transactions"
+                        android:textColor="@color/yoti_blue"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        style="@style/Yoti.Text.Display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="£352.33"
+                        android:textColor="@color/colorAccent"
+                        android:layout_below="@+id/textView4" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="15dp" >
+
+                    <TextView
+                        style="@style/Yoti.Text.Subhead3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Savings"
+                        android:textColor="@color/colorAccent"
+                        android:id="@+id/textView5"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/Yoti.Text.Subhead3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See all transactions"
+                        android:textColor="@color/yoti_blue"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        style="@style/Yoti.Text.Display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="£1,500.00"
+                        android:textColor="@color/colorAccent"
+                        android:layout_below="@+id/textView5" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</android.support.percent.PercentRelativeLayout>
