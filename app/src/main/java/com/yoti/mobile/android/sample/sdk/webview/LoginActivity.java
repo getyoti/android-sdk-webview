@@ -14,8 +14,7 @@ import com.yoti.mobile.android.app.sdk.webview.YotiConnectActivity;
 public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = LoginActivity.class.getSimpleName();
-    //private static final String MY_CONNECT_PAGE_URL = "https://www.yoti.com/connect/8ba48e18-45c0-46f2-ba26-ce59c2a22df4";
-    private static final String MY_CONNECT_PAGE_URL = "https://staging0.www.yoti.com/connect/446dd416-42cd-45a5-b552-d347ca86072b";
+    private static final String MY_CONNECT_PAGE_URL = "https://www.yoti.com/connect/bf1dc128-d8b2-413f-b160-410dec5739fd";
     private static final int YOTI_CONNECT_REQEST_CODE = 1234;
 
 
